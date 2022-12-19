@@ -5,9 +5,11 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/employee')
+mongoose.connect('')
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err));
 
